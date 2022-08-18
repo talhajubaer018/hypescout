@@ -1,5 +1,6 @@
 import React from 'react'
 import profileData from '../../db/db.js'
+import Socials from './Socials.js'
 
 const ProfileContent = () => {
 	return (
@@ -16,12 +17,7 @@ const ProfileContent = () => {
 						<img src='/clock-icon.png' alt='clock' />
 						<h2>Joined On: {data.joinDate}</h2>
 					</div>
-					<div className='social-icons'>
-						<img src='/fb.png' alt='facebook' />
-						<img src='/instagram.png' alt='instagram' />
-						<img src='/linkedin.png' alt='linkedin' />
-						<img src='/twitter.png' alt='twitter' />
-					</div>
+					<Socials />
 					<div className='profile-info'>
 						<h3>
 							<span>{data.followers}</span><br />Followers

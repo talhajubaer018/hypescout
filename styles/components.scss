@@ -157,3 +157,90 @@
 		}
 	}
 }
+
+//Footer
+.footer-bg {
+	background-color: $primary-color;
+
+	.footer {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0px, 1fr));
+		column-gap: 4rem;
+		padding: 4rem 0;
+
+		.footer-logo {
+			margin-bottom: 1.5rem;
+		}
+		p {
+			color: $lightGray-color;
+			margin-bottom: 1.5rem;
+		}
+		.social-icons {
+			display: flex;
+			gap: 1.5rem;
+		}
+		.footer-company {
+			margin-top: 3.5rem;
+			h2 {
+				font-size: 1.125em;
+				font-weight: $font-bold;
+			}
+			h3 {
+				color: $lightGray-color;
+				margin: 1rem 0;
+				cursor: pointer;
+				transition: all 0.3s;
+
+				&:hover {
+					color: $offWhite-color;
+					transition: all 0.3s;
+				}
+			}
+		}
+		.influencer {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0px, 1fr));
+			margin-top: 3.5rem;
+			h2 {
+				font-size: 1.125em;
+				font-weight: $font-bold;
+			}
+			h3 {
+				color: $lightGray-color;
+				margin: 1rem 0;
+				cursor: pointer;
+				transition: all 0.3s;
+
+				&:hover {
+					color: $offWhite-color;
+					transition: all 0.3s;
+				}
+			}
+		}
+	}
+	.copyright {
+		display: flex;
+		padding-bottom: 2rem;
+
+		h3 {
+			margin-right: auto;
+			color: $lightGray-color;
+		}
+		.terms {
+			display: flex;
+			margin-left: auto;
+			gap: 2rem;
+
+			h3 {
+				color: $lightGray-color;
+				transition: all 0.3s;
+
+				&:hover {
+					cursor: pointer;
+					color: $offWhite-color;
+					transition: all 0.3s;
+				}
+			}
+		}
+	}
+}

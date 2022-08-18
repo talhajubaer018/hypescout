@@ -13,7 +13,7 @@ const Header = () => {
 		<header className='header-bg'>
 			<div className='header container'>
 				<div className='logo'>
-					<img src='/logo.png' />
+					<img src='/logo.png' alt='logo' />
 				</div>
 				<nav className='navbar'>
           <div ref={navlist} className='navlist'>
@@ -29,8 +29,8 @@ const Header = () => {
 					</button>
 				</nav>
 				<div className='profile'>
-					<img src='/bell.png' />
-					<img src='/moon.png' />
+					<img src='/bell.png' alt='bell' />
+					<img src='/moon.png' alt='dark-mode' />
 					<h4>
 						<span>Hi,</span>
 						<span className='username'>Rakib</span>
