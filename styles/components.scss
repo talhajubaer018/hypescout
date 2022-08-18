@@ -164,7 +164,7 @@
 
 	.footer {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0px, 1fr));
+		grid-template-columns: repeat(4, minmax(0px, 1fr));
 		column-gap: 4rem;
 		padding: 4rem 0;
 
@@ -197,9 +197,8 @@
 				}
 			}
 		}
-		.influencer {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0px, 1fr));
+		.influencer,
+		.advertise {
 			margin-top: 3.5rem;
 			h2 {
 				font-size: 1.125em;
