@@ -106,3 +106,47 @@
 		}
 	}
 }
+
+//Pagination
+.pagination-section {
+	display: flex;
+	padding: 2rem 0;
+	color: $offWhite-color;
+
+	h3 {
+		font-weight: $font-normal !important;
+	}
+
+	.previous-button {
+		display: flex;
+		margin-right: auto;
+		gap: 0.5rem;
+		padding: 1rem 0;
+	}
+	.pagination {
+		display: flex;
+		margin: auto;
+		h3 {
+			height: 40px;
+			width: 40px;
+			padding: 1rem;
+			line-height: 10px;
+			&.active {
+				background-color: $secondary-color;
+				border-radius: 50%;
+			}
+		}
+		@media screen and (max-width: 500px) {
+			.p-8,
+			.p-9 {
+				display: none;
+			}
+		}
+	}
+	.next-button {
+		display: flex;
+		margin-left: auto;
+		gap: 0.5rem;
+		padding: 1rem 0;
+	}
+}
