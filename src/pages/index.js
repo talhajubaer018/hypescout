@@ -1,4 +1,5 @@
 import Header from '../components/Header'
+import ProfileContent from '../components/ProfileContent'
 import SearchCard from '../components/SearchCard'
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
 		<div className='main'>
 			<Header />
 			<SearchCard />
+			<ProfileContent />
 		</div>
 	)
 }

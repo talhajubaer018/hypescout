@@ -45,5 +45,46 @@
 		margin-left: auto;
 		background-color: $purple-color;
 		color: $white-color;
+		border-radius: $border-rounded;
+	}
+}
+
+//profiles
+.profile-section {
+	background-color: $black-color;
+	display: flex;
+	align-items: center;
+
+	.profile-card {
+		background-color: $primary-color;
+		text-align: center;
+		padding: 2.5rem;
+		border-radius: $border-rounded;
+
+		.profile-name {
+			margin-bottom: 1rem;
+		}
+		.location,
+		.time {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+			margin-bottom: 1rem;
+		}
+		.social-icons {
+			display: flex;
+			justify-content: space-evenly;
+			margin-bottom: 1rem;
+		}
+		.profile-info {
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+
+			h3 {
+				border: 1px dashed $lightGray-color;
+				padding: 0.75rem;
+			}
+		}
 	}
 }
