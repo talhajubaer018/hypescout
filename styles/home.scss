@@ -145,10 +145,18 @@
 		margin-right: auto;
 		gap: 0.5rem;
 		padding: 1rem 0;
+		transition: all 0.3s;
+
+		&:hover {
+			color: $lightGray-color;
+			transition: all 0.3s;
+			cursor: pointer;
+		}
 	}
 	.pagination {
 		display: flex;
 		margin: auto;
+		transition: all 0.3s;
 		h3 {
 			height: 40px;
 			width: 40px;
@@ -157,6 +165,11 @@
 			&.active {
 				background-color: $secondary-color;
 				border-radius: 50%;
+			}
+			&:hover {
+				color: $lightGray-color;
+				transition: all 0.3s;
+				cursor: pointer;
 			}
 		}
 		@media screen and (max-width: 500px) {
@@ -171,5 +184,12 @@
 		margin-left: auto;
 		gap: 0.5rem;
 		padding: 1rem 0;
+		transition: all 0.3s;
+
+		&:hover {
+			color: $lightGray-color;
+			transition: all 0.3s;
+			cursor: pointer;
+		}
 	}
 }
