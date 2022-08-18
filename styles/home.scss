@@ -80,7 +80,9 @@
 		border-radius: $border-rounded;
 
 		.profile-name {
+			margin-top: 1rem;
 			margin-bottom: 1rem;
+			font-weight: $font-semibold;
 		}
 		.location,
 		.time {
@@ -88,6 +90,7 @@
 			justify-content: center;
 			gap: 1rem;
 			margin-bottom: 1rem;
+			color: $lightGray-color;
 		}
 		.social-icons {
 			display: flex;
@@ -98,6 +101,11 @@
 			display: flex;
 			justify-content: space-evenly;
 			gap: 1rem;
+			color: $lightGray-color;
+
+			span {
+				color: $offWhite-color;
+			}
 
 			h3 {
 				border: 1px dashed $lightGray-color;

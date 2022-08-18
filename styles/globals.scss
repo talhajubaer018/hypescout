@@ -22,18 +22,23 @@ a {
 }
 h1 {
 	font-size: $h1-font-size;
+	font-weight: $font-normal;
 }
 h2 {
 	font-size: $h2-font-size;
+	font-weight: $font-normal;
 }
 h3 {
 	font-size: $h3-font-size;
+	font-weight: $font-normal;
 }
 h4 {
 	font-size: $h4-font-size;
+	font-weight: $font-normal;
 }
 h5 {
 	font-size: $h5-font-size;
+	font-weight: $font-normal;
 }
 
 @media (prefers-color-scheme: dark) {
