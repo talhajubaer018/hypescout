@@ -168,6 +168,23 @@
 		column-gap: 4rem;
 		padding: 4rem 0;
 
+		@media screen and (max-width: 800px) {
+			& {
+				grid-template-columns: repeat(1, minmax(0px, 1fr));
+				padding: 2rem 0;
+			}
+		}
+
+		.footer-info {
+			@media screen and (max-width: 800px) {
+				& {
+					text-align: center;
+				}
+				& .social-icons {
+					justify-content: center;
+				}
+			}
+		}
 		.footer-logo {
 			margin-bottom: 1.5rem;
 		}
@@ -181,6 +198,15 @@
 		}
 		.footer-company {
 			margin-top: 3.5rem;
+
+			@media screen and (max-width: 800px) {
+				& {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					place-items: center;
+					align-items: baseline;
+				}
+			}
 			h2 {
 				font-size: 1.125em;
 				font-weight: $font-bold;
@@ -194,6 +220,34 @@
 				&:hover {
 					color: $offWhite-color;
 					transition: all 0.3s;
+				}
+			}
+			.influencer-mobile {
+				display: none;
+
+				@media screen and (max-width: 800px) {
+					& {
+						display: flex;
+						flex-direction: column;
+					}
+				}
+				h3 {
+					margin: 0.5rem 0;
+				}
+			}
+			.advertise-mobile {
+				display: none;
+
+				@media screen and (max-width: 800px) {
+					& {
+						display: flex;
+						flex-direction: column;
+						margin-top: 1rem;
+					}
+				}
+
+				h3 {
+					margin: 0.5rem 0;
 				}
 			}
 		}
@@ -215,11 +269,34 @@
 					transition: all 0.3s;
 				}
 			}
+			@media screen and (max-width: 800px) {
+				& {
+					display: none;
+				}
+			}
 		}
 	}
 	.copyright {
 		display: flex;
 		padding-bottom: 2rem;
+
+		@media screen and (max-width: 800px) {
+			& {
+				flex-wrap: wrap;
+				text-align: center;
+			}
+			h3 {
+				width: 100vw;
+				order: 2;
+			}
+			.terms {
+				margin: auto;
+				margin-bottom: 2rem;
+			}
+			.terms h3 {
+				width: auto;
+			}
+		}
 
 		h3 {
 			margin-right: auto;
