@@ -1,0 +1,49 @@
+.search-card-bg {
+	background-color: $black-color;
+
+	.search-card {
+		display: flex;
+		place-items: center;
+		background-color: $primary-color;
+		padding: 0.5rem 1rem;
+		margin: 2rem auto;
+		border-radius: $border-rounded;
+	}
+	.card-header {
+		margin-right: auto;
+	}
+	.searchbox {
+		position: relative;
+		margin: auto;
+		width: 70%;
+
+		input {
+			width: 100%;
+			background-color: $secondary-color;
+			border: 1px solid $purple-color;
+			border-radius: $border-rounded;
+			padding: 0.75rem;
+			padding-left: 40px;
+
+			&::placeholder {
+				font-family: $font-family;
+			}
+		}
+		.search-icon {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			transform: translate(10px, 10px);
+			color: $lightGray-color;
+		}
+	}
+	.filter-button {
+		display: flex;
+		place-items: center;
+		column-gap: 5px;
+		padding: 0.5rem;
+		margin-left: auto;
+		background-color: $purple-color;
+		color: $white-color;
+	}
+}
