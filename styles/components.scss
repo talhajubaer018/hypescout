@@ -1,0 +1,39 @@
+.header-bg {
+	background-color: $primary-color;
+
+	.header {
+		display: flex;
+		place-items: center;
+		padding: 1.35rem 0;
+
+		.logo {
+			margin-right: auto;
+		}
+		.navbar {
+			display: flex;
+			place-items: center;
+			gap: 1.5rem;
+			margin: auto;
+
+			& .active {
+				background-color: $secondary-color;
+				padding: 0.5rem 1rem;
+				border-radius: 5px;
+			}
+		}
+		.profile {
+			display: flex;
+			place-items: center;
+			gap: 1rem;
+			margin-left: auto;
+
+			& span {
+				color: $offWhite-color;
+			}
+			& .username {
+				color: $lightGray-color;
+				padding-left: 2px;
+			}
+		}
+	}
+}
