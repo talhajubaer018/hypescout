@@ -8,6 +8,10 @@
 		padding: 0.5rem 1rem;
 		margin: 2rem auto;
 		border-radius: $border-rounded;
+
+		@media screen and (max-width: 600px) {
+			flex-direction: column;
+		}
 	}
 	.card-header {
 		margin-right: auto;
@@ -21,6 +25,12 @@
 			& {
 				margin-left: 10px;
 				margin-right: 10px;
+			}
+		}
+		@media screen and (max-width: 600px) {
+			& {
+				width: 100%;
+				margin-top: 1rem;
 			}
 		}
 
@@ -59,6 +69,12 @@
 		&:hover {
 			background-color: $lightGray-color;
 			transition: all 0.3s;
+		}
+
+		@media screen and (max-width: 600px) {
+			& {
+				margin: 1rem auto;
+			}
 		}
 		img {
 			width: 20px;
