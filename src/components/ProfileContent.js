@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import profileData from '../../db/db.js'
+import { profileData } from '../../db/db.js'
 import Socials from './Socials.js'
 
 const ProfileContent = ({ keyword }) => {

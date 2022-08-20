@@ -56,6 +56,7 @@
 		}
 	}
 	.filter-button {
+		position: relative;
 		display: flex;
 		place-items: center;
 		column-gap: 5px;
@@ -84,7 +85,68 @@
 		h3 {
 			font-family: $font-family;
 		}
+		.filter-modal {
+			position: absolute;
+			bottom: -10px;
+			left: -100%;
+			transform: translateY(100%);
+			width: 200%;
+			background-color: $primary-color;
+			padding: 1rem 0rem;
+
+			.filter-modal-header {
+				padding-bottom: 1rem;
+				margin-bottom: 1rem;
+				border-bottom: 2px solid $thin-border-color;
+			}
+			.filter-lists {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				text-align: left;
+				padding: 0 1rem;
+
+				.filter-header {
+					color: $filter-header-color;
+				}
+
+				select {
+					font-family: $font-family;
+					margin-top: 0.5rem;
+					margin-bottom: 1rem;
+					width: 100%;
+					background-color: $option-bg-color;
+					color: $white-color;
+					padding: 1rem;
+					border: 0;
+					appearance: none;
+					background-image: url('/down-arrow.png');
+					background-repeat: no-repeat;
+					background-position: calc(100% - 1rem) center;
+					&:focus {
+						outline: 0;
+					}
+					option {
+						font-family: $font-family;
+
+						&:focus {
+							outline: 0;
+							border: 0;
+						}
+					}
+				}
+			}
+		}
 	}
+}
+.modal-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: $secondary-color;
+	opacity: 0.6;
 }
 
 //profiles
