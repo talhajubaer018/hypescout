@@ -1,12 +1,12 @@
 import React from 'react'
 
-const SearchCard = () => {
+const SearchCard = ({search}) => {
   return (
     <section className='search-card-bg'>
 				<div className='search-card container'>
 					<h1 className='card-header'>Profile(6)</h1>
 					<div className='searchbox'>
-						<input type='text' placeholder='Search Profile' />
+						<input type='text' placeholder='Search Profile' onChange={(e) => search(e.target.value)} />
 						<div className='search-icon'>
 							<img src='/search.png' alt='search' />
 						</div>
