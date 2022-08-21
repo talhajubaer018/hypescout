@@ -78,7 +78,7 @@ const FilterModal = ({ profileData }) => {
 			<h2 className='filter-modal-header'>Filter Options</h2>
 			<div className='filter-lists'>
 				<div>
-					<h3 className='filter-header'>Influncer's Industry</h3>
+					<h3 className='filter-header'>Influncer&apos;s Industry</h3>
 					<select name='category' value={industry} onChange={e => setIndustry(e.target.value)}>
 						<option value='' defaultValue=''>
 							Select Options
@@ -91,7 +91,7 @@ const FilterModal = ({ profileData }) => {
 					</select>
 				</div>
 				<div>
-					<h3 className='filter-header'>Influncer's Country</h3>
+					<h3 className='filter-header'>Influncer&apos;s Country</h3>
 					<select name='influencer country' value={influencerCountry} onChange={e => setInfluencerCountry(e.target.value)}>
 						<option value='' defaultValue=''>
 							Select Options
@@ -102,7 +102,7 @@ const FilterModal = ({ profileData }) => {
 					</select>
 				</div>
 				<div>
-					<h3 className='filter-header'>Audience's Country</h3>
+					<h3 className='filter-header'>Audience&apos;s Country</h3>
 					<select name='audience country' value={audienceCountry} onChange={e => setAudienceCountry(e.target.value)}>
 						<option value='' defaultValue=''>
 							Select Options
@@ -115,7 +115,7 @@ const FilterModal = ({ profileData }) => {
 					</select>
 				</div>
 				<div>
-					<h3 className='filter-header'>Influencer’s Social Media Platform</h3>
+					<h3 className='filter-header'>Influencer&apos;s Social Media Platform</h3>
 					<select name='platform' value={socialMedia} onChange={e => setSocialMedia(e.target.value)}>
 						<option value='' defaultValue=''>
 							Select Options
@@ -127,11 +127,11 @@ const FilterModal = ({ profileData }) => {
 					</select>
 				</div>
 				<div>
-					<h3 className='filter-header'>Influencer’s Social Media Followers</h3>
+					<h3 className='filter-header'>Influencer&apos;s Social Media Followers</h3>
 					<Slider min={1} max={7} value={sliderStep} onChange={sliderInputChange} format={labelHandler} step={1} labels={{ 1: '0', 2: '25k', 3: '50k', 4: '100k', 5: '250k', 6: '500k', 7: '1M' }} />
 				</div>
 				<div>
-					<h3 className='filter-header'>Influencer’s Gender</h3>
+					<h3 className='filter-header'>Influencer&apos;s Gender</h3>
 					<div className='radio-buttons'>
 						<div className='male-radio'>
 							<input type='radio' id='male' name='gender' value='male' onChange={(e)=> setGender(e.target.value)}></input>
