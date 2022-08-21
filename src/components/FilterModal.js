@@ -7,39 +7,39 @@ const FilterModal = ({ profileData }) => {
 	const [sliderStep, setSliderStep] = useState(0)
 
 	const labelHandler = () => {
-		if(sliderStep === 1){
-			return "0"
-		} else if(sliderStep === 2){
-			return "25k"
-		} else if(sliderStep === 3){
-			return "50k"
-		} else if(sliderStep === 4){
-			return "100k"
-		} else if(sliderStep === 5){
-			return "250k"
-		} else if(sliderStep === 6){
-			return "500k"
-		} else if(sliderStep === 7){
-			return "1M"
+		if (sliderStep === 1) {
+			return '0'
+		} else if (sliderStep === 2) {
+			return '25k'
+		} else if (sliderStep === 3) {
+			return '50k'
+		} else if (sliderStep === 4) {
+			return '100k'
+		} else if (sliderStep === 5) {
+			return '250k'
+		} else if (sliderStep === 6) {
+			return '500k'
+		} else if (sliderStep === 7) {
+			return '1M'
 		}
 	}
 
 	const sliderInputChange = (value) => {
 		setSliderStep(value)
 		console.log(sliderStep)
-		if(value === 0){
+		if (value === 0) {
 			setSliderValue(0)
-		} else if(value === 1){
+		} else if (value === 1) {
 			setSliderValue(25000)
-		} else if(value === 2){
+		} else if (value === 2) {
 			setSliderValue(50000)
-		} else if(value === 3){
+		} else if (value === 3) {
 			setSliderValue(100000)
-		} else if(value === 4){
+		} else if (value === 4) {
 			setSliderValue(250000)
-		} else if(value === 5){
+		} else if (value === 5) {
 			setSliderValue(500000)
-		} else if(value === 6){
+		} else if (value === 6) {
 			setSliderValue(1000000)
 		}
 	}
@@ -97,12 +97,31 @@ const FilterModal = ({ profileData }) => {
 					</select>
 				</div>
 				<div>
-				<h3 className='filter-header'>Influencer’s Social Media Followers</h3>
-					<Slider min={1} max={7} value={sliderStep} onChange={sliderInputChange} format={labelHandler} step={1} labels={{ 1:'0', 2: '25k', 3: '50k', 4: '100k', 5: '250k', 6: '500k', 7: '1M' }} />
+					<h3 className='filter-header'>Influencer’s Social Media Followers</h3>
+					<Slider min={1} max={7} value={sliderStep} onChange={sliderInputChange} format={labelHandler} step={1} labels={{ 1: '0', 2: '25k', 3: '50k', 4: '100k', 5: '250k', 6: '500k', 7: '1M' }} />
 				</div>
-				<div>Influencer’s Social Media Platform Slider</div>
-				<div>Influencer’s Gender</div>
-				<div>Buttons</div>
+				<div>
+					<h3 className='filter-header'>Influencer’s Gender</h3>
+					<form>
+						<div className='male-radio'>
+							<input type='radio' id='male' name='gender' value='male'></input>
+							<label htmlFor='male'>Male</label>
+						</div>
+						<div className='female-radio'>
+							<input type='radio' id='female' name='gender' value='female'></input>
+							<label htmlForfor='female'>Female</label>
+						</div>
+					</form>
+					<div className='filter-buttons'>
+						<div>
+							<button className='reset-button'>Reset</button>
+						</div>
+						<div>
+
+							<button className='apply-button'>Apply</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
