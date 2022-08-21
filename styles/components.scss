@@ -524,6 +524,7 @@
 		background-color: $black-color;
 		color: $filter-button-color;
 		border-radius: $border-rounded;
+		border: 0;
 		cursor: pointer;
 	}
 	.apply-button {
@@ -532,6 +533,7 @@
 		background-color: $purple-color;
 		color: $white-color;
 		border-radius: $border-rounded;
+		border: 0;
 		cursor: pointer;
 		margin-left: 0.5rem;
 	}
