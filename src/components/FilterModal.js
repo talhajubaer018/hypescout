@@ -26,7 +26,6 @@ const FilterModal = ({ profileData }) => {
 
 	const sliderInputChange = (value) => {
 		setSliderStep(value)
-		console.log(sliderStep)
 		if (value === 0) {
 			setSliderValue(0)
 		} else if (value === 1) {
@@ -109,7 +108,7 @@ const FilterModal = ({ profileData }) => {
 						</div>
 						<div className='female-radio'>
 							<input type='radio' id='female' name='gender' value='female'></input>
-							<label htmlForfor='female'>Female</label>
+							<label htmlFor='female'>Female</label>
 						</div>
 					</form>
 					<div className='filter-buttons'>
@@ -117,7 +116,6 @@ const FilterModal = ({ profileData }) => {
 							<button className='reset-button'>Reset</button>
 						</div>
 						<div>
-
 							<button className='apply-button'>Apply</button>
 						</div>
 					</div>
