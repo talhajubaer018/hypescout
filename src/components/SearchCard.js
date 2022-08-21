@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 import { profileData } from '../../db/db.js'
 import FilterModal from './FilterModal.js'
@@ -14,6 +14,19 @@ const SearchCard = ({ search }) => {
 	const modalClose = () => {
 		modalBg.current.classList.remove('show')
 	}
+
+	useEffect(() => {
+
+    const handleClick = (e) => {
+      if (modal.current && !modal.current.contains(e.target) && modalBg.current && modalBg.current.contains(e.target))  {
+        modal.current.classList.remove('show')
+        modalBg.current.classList.remove('show')
+      }
+    }
+    window.addEventListener('click', handleClick)
+    return () => window.removeEventListener('click', handleClick)
+  }, [])
+
 	return (
 		<section className='search-card-bg'>
 			<div className='search-card container'>
