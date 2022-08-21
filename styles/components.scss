@@ -453,17 +453,17 @@
 		}
 		&::before {
 			position: absolute;
-			width: 50%;
-			height: 50%;
-			background: $small-text-color;
+			width: 5px;
+			height: 5px;
+			border: 2px solid $small-text-color;
 			z-index: 1;
 			opacity: var(--opacity, 1);
 			// animation: stretch-animate 0.3s ease-out 0.17s;
 		}
 		&::after {
 			position: relative;
-			width: 50%;
-			height: 50%;
+			width: 7px;
+			height: 7px;
 			background: var(--radio-checked);
 			top: var(--y, 100%);
 			// transition: top 0.5s cubic-bezier(0.48, 1.97, 0.5, 0.63);
