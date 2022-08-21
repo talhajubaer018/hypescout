@@ -2,6 +2,7 @@
 	background-color: $black-color;
 
 	.search-card {
+		position: relative;
 		display: flex;
 		place-items: center;
 		background-color: $primary-color;
@@ -67,6 +68,7 @@
 		color: $white-color;
 		border-radius: $border-rounded;
 		cursor: pointer;
+		z-index: 20;
 		transition: all 0.3s;
 
 		@media screen and (max-width: 600px) {
@@ -81,63 +83,72 @@
 		h3 {
 			font-family: $font-family;
 		}
-		.modal-container {
-			position: absolute;
-			bottom: -10px;
-			left: -100%;
-			transform: translateY(100%);
-			width: 200%;
-			background-color: $primary-color;
-			padding: 1rem 0rem;
-			opacity: 0;
-			z-index: -5;
+	}
+	.modal-container {
+		position: absolute;
+		bottom: -10px;
+		right: 0;
+		transform: translateY(100%);
+		width: 275px;
+		background-color: $primary-color;
+		padding: 1rem 0rem;
+		opacity: 0;
+		z-index: -5;
+		border-radius: $border-rounded;
+		transition: opacity 0.3s;
+
+		&.show {
+			opacity: 1;
+			z-index: 50;
 			transition: opacity 0.3s;
-
-			&.show {
-				opacity: 1;
-				z-index: 50;
-				transition: opacity 0.3s;
+		}
+		@media screen and (max-width: 600px) {
+			& {
+				right: 50%;
+				transform: translate(50%, 100%);
+				bottom: 10px;
 			}
+		}
 
-			.filter-modal {
-				.filter-modal-header {
-					padding-bottom: 1rem;
-					margin-bottom: 1rem;
-					border-bottom: 2px solid $thin-border-color;
+		.filter-modal {
+			.filter-modal-header {
+				padding-left: 1rem;
+				padding-bottom: 1rem;
+				margin-bottom: 1rem;
+				border-bottom: 2px solid $thin-border-color;
+			}
+			.filter-lists {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				text-align: left;
+				padding: 0 1rem;
+
+				.filter-header {
+					color: $filter-header-color;
 				}
-				.filter-lists {
-					display: flex;
-					flex-direction: column;
-					gap: 1rem;
-					text-align: left;
-					padding: 0 1rem;
 
-					.filter-header {
-						color: $filter-header-color;
+				select {
+					font-family: $font-family;
+					margin-top: 0.5rem;
+					width: 100%;
+					background-color: $option-bg-color;
+					color: $white-color;
+					padding: 1rem;
+					border: 0;
+					appearance: none;
+					background-image: url('/down-arrow.png');
+					background-repeat: no-repeat;
+					background-position: calc(100% - 1rem) center;
+					&:focus {
+						outline: 0;
 					}
-
-					select {
+					option {
 						font-family: $font-family;
-						margin-top: 0.5rem;
-						width: 100%;
-						background-color: $option-bg-color;
-						color: $white-color;
-						padding: 1rem;
-						border: 0;
-						appearance: none;
-						background-image: url('/down-arrow.png');
-						background-repeat: no-repeat;
-						background-position: calc(100% - 1rem) center;
+
 						&:focus {
 							outline: 0;
-						}
-						option {
-							font-family: $font-family;
-
-							&:focus {
-								outline: 0;
-								border: 0;
-							}
+							border: 0;
 						}
 					}
 				}
@@ -150,9 +161,18 @@
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
-	background-color: $secondary-color;
-	opacity: 0.6;
+	height: 150vh;
+	background-color: transparent;
+	opacity: 0;
+	z-index: -19;
+	transition: all 0.3s;
+
+	&.show {
+		background-color: $secondary-color;
+		opacity: 0.6;
+		transition: all 0.3s;
+		z-index: 19;
+	}
 }
 
 //profiles
