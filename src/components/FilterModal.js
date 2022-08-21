@@ -6,6 +6,13 @@ const FilterModal = ({ profileData }) => {
 	const [sliderValue, setSliderValue] = useState(0)
 	const [sliderStep, setSliderStep] = useState(0)
 
+	const [industry, setIndustry] = useState('')
+	const [influencerCountry, setInfluencerCountry] = useState('')
+	const [audienceCountry, setAudienceCountry] = useState('')
+	const [socialMedia, setSocialMedia] = useState('')
+	const [followers, setFollowers] = useState('')
+	const [gender, setGender] = useState('')
+
 	const labelHandler = () => {
 		if (sliderStep === 1) {
 			return '0'
@@ -30,25 +37,49 @@ const FilterModal = ({ profileData }) => {
 			setSliderValue(0)
 		} else if (value === 1) {
 			setSliderValue(25000)
+			setFollowers(0)
 		} else if (value === 2) {
 			setSliderValue(50000)
+			setFollowers(25000)
 		} else if (value === 3) {
 			setSliderValue(100000)
+			setFollowers(50000)
 		} else if (value === 4) {
 			setSliderValue(250000)
+			setFollowers(100000)
 		} else if (value === 5) {
 			setSliderValue(500000)
+			setFollowers(250000)
 		} else if (value === 6) {
 			setSliderValue(1000000)
+			setFollowers(500000)
+		} else if (value === 7) {
+			setFollowers(1000000)
 		}
 	}
+
+	const resetFilter = (e) => {
+		e.preventDefault()
+		setIndustry('')
+		setInfluencerCountry('')
+		setAudienceCountry('')
+		setSocialMedia('')
+		setFollowers(0)
+		setGender('')
+	}
+	const applyFilter = (e) => {
+		e.preventDefault()
+		console.log('apply')
+		{console.log(industry, influencerCountry , audienceCountry, socialMedia, followers, gender)}
+	}
+
 	return (
-		<div className='filter-modal'>
+		<form className='filter-modal'>
 			<h2 className='filter-modal-header'>Filter Options</h2>
 			<div className='filter-lists'>
 				<div>
 					<h3 className='filter-header'>Influncer's Industry</h3>
-					<select placeholder='Select Option' name='category'>
+					<select name='category' value={industry} onChange={e => setIndustry(e.target.value)}>
 						<option value='' defaultValue=''>
 							Select Options
 						</option>
@@ -61,7 +92,7 @@ const FilterModal = ({ profileData }) => {
 				</div>
 				<div>
 					<h3 className='filter-header'>Influncer's Country</h3>
-					<select name='influencer country'>
+					<select name='influencer country' value={influencerCountry} onChange={e => setInfluencerCountry(e.target.value)}>
 						<option value='' defaultValue=''>
 							Select Options
 						</option>
@@ -72,7 +103,7 @@ const FilterModal = ({ profileData }) => {
 				</div>
 				<div>
 					<h3 className='filter-header'>Audience's Country</h3>
-					<select name='audience country'>
+					<select name='audience country' value={audienceCountry} onChange={e => setAudienceCountry(e.target.value)}>
 						<option value='' defaultValue=''>
 							Select Options
 						</option>
@@ -85,14 +116,14 @@ const FilterModal = ({ profileData }) => {
 				</div>
 				<div>
 					<h3 className='filter-header'>Influencer’s Social Media Platform</h3>
-					<select name='platform'>
+					<select name='platform' value={socialMedia} onChange={e => setSocialMedia(e.target.value)}>
 						<option value='' defaultValue=''>
 							Select Options
 						</option>
-						<option value='facebook'>Facebook</option>
-						<option value='instagram'>Instagram</option>
-						<option value='linkedin'>Linkedin</option>
-						<option value='twitter'>Twitter</option>
+						<option value='Facebook'>Facebook</option>
+						<option value='Instagram'>Instagram</option>
+						<option value='Linkedin'>Linkedin</option>
+						<option value='Twitter'>Twitter</option>
 					</select>
 				</div>
 				<div>
@@ -101,27 +132,27 @@ const FilterModal = ({ profileData }) => {
 				</div>
 				<div>
 					<h3 className='filter-header'>Influencer’s Gender</h3>
-					<form>
+					<div className='radio-buttons'>
 						<div className='male-radio'>
-							<input type='radio' id='male' name='gender' value='male'></input>
+							<input type='radio' id='male' name='gender' value='male' onChange={(e)=> setGender(e.target.value)}></input>
 							<label htmlFor='male'>Male</label>
 						</div>
 						<div className='female-radio'>
-							<input type='radio' id='female' name='gender' value='female'></input>
+							<input type='radio' id='female' name='gender' value='female' onChange={(e)=> setGender(e.target.value)}></input>
 							<label htmlFor='female'>Female</label>
 						</div>
-					</form>
+					</div>
 					<div className='filter-buttons'>
 						<div>
-							<button className='reset-button'>Reset</button>
+							<button className='reset-button' onClick={resetFilter}>Reset</button>
 						</div>
 						<div>
-							<button className='apply-button'>Apply</button>
+							<button className='apply-button' onClick={applyFilter}>Apply</button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</form>
 	)
 }
 
